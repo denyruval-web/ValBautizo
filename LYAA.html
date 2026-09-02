@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bautizo de Lya Valentina</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   COLORES
+===================================================== */
+
+:root {
+    --rosa: #d66f95;
+    --rosa-oscuro: #b94f78;
+    --rosa-claro: #f8c5d6;
+    --rosa-palido: #fff0f5;
+    --crema: #fffaf5;
+    --dorado: #d3a34f;
+    --dorado-claro: #efd495;
+    --vino: #8f3858;
+    --texto: #654854;
+    --blanco: #ffffff;
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f7dce6;
+    color: var(--texto);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.invitacion {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background:
+        linear-gradient(
+            180deg,
+            #fffafd 0%,
+            #fff1f6 45%,
+            #fffaf5 100%
+        );
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 45px rgba(100, 40, 65, .15);
+}
+
+
+/* =====================================================
+   PAPEL PICADO
+===================================================== */
+
+.papel-picado {
+    width: 100%;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+}
+
+.bandera {
+    width: 62px;
+    height: 54px;
+    position: relative;
+    transform-origin: top center;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 78%,
+        75% 100%,
+        50% 78%,
+        25% 100%,
+        0 78%
+    );
+
+    animation: moverPapel 3s ease-in-out infinite;
+}
+
+.bandera:nth-child(1) {
+    background: #d66f95;
+    animation-delay: .1s;
+}
+
+.bandera:nth-child(2) {
+    background: #efd495;
+    animation-delay: .3s;
+}
+
+.bandera:nth-child(3) {
+    background: #c95d85;
+    animation-delay: .5s;
+}
+
+.bandera:nth-child(4) {
+    background: #f1b3c9;
+    animation-delay: .7s;
+}
+
+.bandera:nth-child(5) {
+    background: #d66f95;
+    animation-delay: .9s;
+}
+
+.bandera:nth-child(6) {
+    background: #e6c477;
+    animation-delay: 1.1s;
+}
+
+.bandera:nth-child(7) {
+    background: #c95d85;
+    animation-delay: 1.3s;
+}
+
+.bandera::after {
+    content: "✿";
+    position: absolute;
+    left: 50%;
+    top: 9px;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 17px;
+}
+
+@keyframes moverPapel {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(4deg);
+    }
+}
+
+
+/* =====================================================
+   ELEMENTOS FLOTANTES
+===================================================== */
+
+.decoracion-flotante {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.nube {
+    color: white;
+    font-size: 55px;
+    opacity: .8;
+    filter: drop-shadow(0 5px 8px rgba(120,60,80,.1));
+    animation: nubeFlota 6s ease-in-out infinite;
+}
+
+.nube1 {
+    top: 90px;
+    left: -10px;
+}
+
+.nube2 {
+    top: 190px;
+    right: -10px;
+    font-size: 45px;
+    animation-delay: 2s;
+}
+
+.nube3 {
+    bottom: 80px;
+    left: 10px;
+    font-size: 40px;
+    animation-delay: 1s;
+}
+
+@keyframes nubeFlota {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-13px);
+    }
+}
+
+
+/* =====================================================
+   ESTRELLAS
+===================================================== */
+
+.estrella {
+    color: var(--dorado);
+    position: absolute;
+    animation: estrellaBrilla 2.5s ease-in-out infinite;
+}
+
+.estrella1 {
+    top: 150px;
+    left: 20%;
+}
+
+.estrella2 {
+    top: 280px;
+    right: 18%;
+    animation-delay: .8s;
+}
+
+.estrella3 {
+    bottom: 180px;
+    left: 15%;
+    animation-delay: 1.4s;
+}
+
+.estrella4 {
+    bottom: 120px;
+    right: 18%;
+    animation-delay: 1.9s;
+}
+
+@keyframes estrellaBrilla {
+    0%, 100% {
+        opacity: .3;
+        transform: scale(.8) rotate(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3) rotate(20deg);
+    }
+}
+
+
+/* =====================================================
+   BRILLITOS
+===================================================== */
+
+.brillito {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--dorado);
+    box-shadow: 0 0 10px var(--dorado);
+    opacity: 0;
+    animation: subirBrillito 5s linear infinite;
+}
+
+.brillito1 {
+    left: 15%;
+    bottom: 0;
+}
+
+.brillito2 {
+    left: 35%;
+    bottom: 5%;
+    animation-delay: 1.2s;
+}
+
+.brillito3 {
+    left: 55%;
+    bottom: 0;
+    animation-delay: 2.4s;
+}
+
+.brillito4 {
+    right: 25%;
+    bottom: 5%;
+    animation-delay: 3.1s;
+}
+
+.brillito5 {
+    right: 10%;
+    bottom: 0;
+    animation-delay: 1.8s;
+}
+
+@keyframes subirBrillito {
+
+    0% {
+        transform: translateY(0) scale(.5);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-280px) scale(1.4);
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   PORTADA
+===================================================== */
+
+.portada {
+    min-height: calc(100vh - 58px);
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 45px 25px 70px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255,255,255,.98),
+            transparent 48%
+        ),
+        linear-gradient(
+            180deg,
+            #ffeaf2,
+            #fffafc
+        );
+}
+
+.contenido-portada {
+    position: relative;
+    z-index: 4;
+    animation: entradaPortada 1.4s ease-out;
+}
+
+@keyframes entradaPortada {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mini {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--vino);
+}
+
+.adorno {
+    color: var(--dorado);
+    font-size: 23px;
+    letter-spacing: 8px;
+    margin: 17px 0;
+}
+
+.nombre {
+    font-family: 'Great Vibes', cursive;
+    color: var(--vino);
+    font-size: 82px;
+    line-height: .82;
+    margin: 20px 0;
+
+    text-shadow:
+        2px 2px white,
+        0 7px 18px rgba(150,54,83,.18);
+
+    animation: aparecerNombre 1.5s ease-out;
+}
+
+@keyframes aparecerNombre {
+
+    0% {
+        opacity: 0;
+        transform: scale(.75);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.bautizo {
+    color: var(--dorado);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 29px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    margin: 20px 0;
+}
+
+.frase-portada {
+    max-width: 420px;
+    margin: auto;
+    color: #735260;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    line-height: 1.5;
+}
+
+.fecha-portada {
+    margin-top: 27px;
+    color: var(--vino);
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   SECCIONES
+===================================================== */
+
+.seccion {
+    padding: 75px 24px;
+    text-align: center;
+    position: relative;
+}
+
+.seccion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--dorado-claro),
+            transparent
+        );
+}
+
+.etiqueta {
+    color: var(--rosa-oscuro);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.titulo {
+    color: var(--vino);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 39px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.texto {
+    color: var(--texto);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   ANIMACIÓN DE SCROLL
+===================================================== */
+
+.revelar {
+    animation: revelarSection .9s ease both;
+}
+
+@keyframes revelarSection {
+
+    from {
+        transform: translateY(25px);
+        opacity: .5;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   TARJETAS
+===================================================== */
+
+.tarjeta {
+    max-width: 480px;
+    margin: 28px auto;
+
+    padding: 32px 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.98),
+            rgba(255,247,250,.96)
+        );
+
+    border: 1px solid #e5b5c6;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 12px 35px rgba(110,45,70,.09);
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.tarjeta::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    top: -35px;
+    right: -25px;
+
+    border: 1px solid rgba(211,163,79,.35);
+}
+
+.tarjeta::after {
+    content: "✿";
+    position: absolute;
+
+    bottom: 13px;
+    left: 18px;
+
+    color: rgba(211,163,79,.45);
+    font-size: 18px;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 18px 40px rgba(110,45,70,.14);
+}
+
+.tarjeta h3 {
+    color: var(--rosa-oscuro);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.persona {
+    color: #713e51;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    line-height: 1.5;
+}
+
+.corazon {
+    color: var(--rosa);
+    font-size: 25px;
+    margin: 12px 0;
+    animation: latido 1.8s ease-in-out infinite;
+}
+
+@keyframes latido {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+
+/* =====================================================
+   FECHA
+===================================================== */
+
+.dia {
+    color: var(--vino);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.mes {
+    color: var(--dorado);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 5px 0 23px;
+}
+
+
+/* =====================================================
+   CUENTA REGRESIVA
+===================================================== */
+
+.cuenta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+
+    max-width: 480px;
+    margin: 30px auto 0;
+}
+
+.caja {
+    background: #fffafd;
+    border: 1px solid #e7bdcd;
+    border-radius: 17px;
+    padding: 15px 3px;
+
+    box-shadow:
+        0 5px 15px rgba(120,50,75,.05);
+}
+
+.numero {
+    color: var(--vino);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.nombre-tiempo {
+    color: #a06b7c;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+/* =====================================================
+   UBICACIONES
+===================================================== */
+
+.icono {
+    font-size: 40px;
+    margin-bottom: 12px;
+    animation: flotarIcono 4s ease-in-out infinite;
+}
+
+@keyframes flotarIcono {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.direccion {
+    font-size: 14px;
+    line-height: 1.85;
+    color: #684754;
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.boton {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: var(--rosa-oscuro);
+    color: white;
+
+    padding: 14px 25px;
+
+    border-radius: 50px;
+
+    margin-top: 20px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: .5px;
+
+    box-shadow:
+        0 7px 18px rgba(185,79,120,.25);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 11px 23px rgba(185,79,120,.3);
+}
+
+.boton:active {
+    transform: scale(.94);
+}
+
+.boton-dorado {
+    background: var(--dorado);
+    box-shadow:
+        0 7px 18px rgba(211,163,79,.25);
+}
+
+
+/* =====================================================
+   DECORACIÓN
+===================================================== */
+
+.separador {
+    color: var(--dorado);
+    font-size: 20px;
+    letter-spacing: 10px;
+    margin: 25px 0;
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.final {
+    padding-bottom: 100px;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            white,
+            transparent 60%
+        );
+}
+
+.firma {
+    font-family: 'Great Vibes', cursive;
+    color: var(--vino);
+    font-size: 46px;
+    margin: 16px 0 25px;
+}
+
+.final-corazones {
+    color: var(--rosa);
+    font-size: 25px;
+    letter-spacing: 10px;
+    animation: latido 2s infinite;
+}
+
+
+/* =====================================================
+   CORAZONES FLOTANTES
+===================================================== */
+
+.corazon-flotante {
+    position: absolute;
+    color: rgba(214,111,149,.35);
+    font-size: 18px;
+    animation: corazonSube 8s linear infinite;
+    pointer-events: none;
+}
+
+.cf1 {
+    left: 10%;
+    bottom: 0;
+}
+
+.cf2 {
+    left: 50%;
+    bottom: 0;
+    animation-delay: 3s;
+}
+
+.cf3 {
+    right: 12%;
+    bottom: 0;
+    animation-delay: 5s;
+}
+
+@keyframes corazonSube {
+
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(.7);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-500px) scale(1.2) rotate(20deg);
+    }
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media (max-width: 390px) {
+
+    .nombre {
+        font-size: 69px;
+    }
+
+    .titulo {
+        font-size: 34px;
+    }
+
+    .frase-portada {
+        font-size: 19px;
+    }
+
+    .seccion {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .cuenta {
+        gap: 5px;
+    }
+
+    .numero {
+        font-size: 27px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="invitacion">
+
+
+<!-- =================================================
+     PAPEL PICADO SUPERIOR
+================================================== -->
+
+<div class="papel-picado">
+
+    <div class="bandera"></div>
+    <div class="bandera"></div>
+    <div class="bandera"></div>
+    <div class="bandera"></div>
+    <div class="bandera"></div>
+    <div class="bandera"></div>
+    <div class="bandera"></div>
+
+</div>
+
+
+<!-- =================================================
+     PORTADA
+================================================== -->
+
+<section class="portada">
+
+    <div class="decoracion-flotante nube nube1">
+        ☁︎
+    </div>
+
+    <div class="decoracion-flotante nube nube2">
+        ☁︎
+    </div>
+
+    <div class="decoracion-flotante nube nube3">
+        ☁︎
+    </div>
+
+
+    <div class="estrella estrella1">
+        ✦
+    </div>
+
+    <div class="estrella estrella2">
+        ✧
+    </div>
+
+    <div class="estrella estrella3">
+        ✦
+    </div>
+
+    <div class="estrella estrella4">
+        ✧
+    </div>
+
+
+    <div class="brillito brillito1"></div>
+    <div class="brillito brillito2"></div>
+    <div class="brillito brillito3"></div>
+    <div class="brillito brillito4"></div>
+    <div class="brillito brillito5"></div>
+
+
+    <div class="contenido-portada">
+
+        <div class="mini">
+            Con mucha ilusión
+        </div>
+
+        <div class="adorno">
+            ✦ ✿ ✦
+        </div>
+
+        <div class="nombre">
+            Lya<br>
+            Valentina
+        </div>
+
+        <div class="bautizo">
+            Mi Bautizo
+        </div>
+
+        <p class="frase-portada">
+            Un día lleno de amor, bendiciones
+            y momentos para guardar en el corazón.
+        </p>
+
+        <div class="adorno">
+            ♡ ✦ ♡
+        </div>
+
+        <div class="fecha-portada">
+            SÁBADO · 26 · SEPTIEMBRE · 2026
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     PRESENTACIÓN
+================================================== -->
+
+<section class="seccion revelar">
+
+    <div class="adorno">
+        ✿ ♡ ✿
+    </div>
+
+    <div class="etiqueta">
+        Una fecha para recordar
+    </div>
+
+    <h2 class="titulo">
+        Hoy comienza algo bonito
+    </h2>
+
+    <p class="texto">
+
+        Con mucha ilusión queremos compartir
+        contigo el bautizo de nuestra pequeña
+        Lya Valentina.
+
+        <br><br>
+
+        Será un día para celebrar en familia,
+        agradecer y disfrutar de estar juntos.
+
+    </p>
+
+    <div class="separador">
+        · ✦ ·
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     MIS PAPÁS Y MADRINAS
+================================================== -->
+
+<section class="seccion revelar">
+
+
+    <div class="tarjeta">
+
+        <div class="etiqueta">
+            Mis papás
+        </div>
+
+        <div class="corazon">
+            ♡
+        </div>
+
+        <p class="persona">
+
+            <strong>
+                Diego Armando Bautista Ramírez
+            </strong>
+
+            <br>
+
+            &
+
+            <br>
+
+            <strong>
+                Ludwika Amairany Cano Reyes
+            </strong>
+
+        </p>
+
+    </div>
+
+
+    <div class="tarjeta">
+
+        <div class="etiqueta">
+            Mis madrinas
+        </div>
+
+        <div class="corazon">
+            ✿
+        </div>
+
+        <p class="persona">
+
+            <strong>
+                Dania Consuelo Reyes López
+            </strong>
+
+            <br><br>
+
+            <strong>
+                Daryana Ximena Reyes López
+            </strong>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     FECHA + CUENTA
+================================================== -->
+
+<section class="seccion revelar">
+
+    <div class="adorno">
+        ✦ ✿ ✦
+    </div>
+
+    <div class="etiqueta">
+        Aparta la fecha
+    </div>
+
+    <h2 class="titulo">
+        Nos vemos el
+    </h2>
+
+
+    <div class="tarjeta">
+
+        <div class="dia">
+            26
+        </div>
+
+        <div class="mes">
+            Septiembre · 2026
+        </div>
+
+        <p class="texto">
+
+            <strong>
+                1:00 p.m.
+            </strong>
+
+            <br>
+
+            Ceremonia Religiosa 
+
+            <br><br>
+
+            <strong>
+                3:00 p.m.
+            </strong>
+
+            <br>
+
+            Recepción
+
+        </p>
+
+    </div>
+
+
+    <div class="etiqueta">
+        La cuenta regresiva comienza...
+    </div>
+
+
+    <div class="cuenta">
+
+        <div class="caja">
+
+            <div class="numero" id="dias">
+                0
+            </div>
+
+            <div class="nombre-tiempo">
+                Días
+            </div>
+
+        </div>
+
+
+        <div class="caja">
+
+            <div class="numero" id="horas">
+                0
+            </div>
+
+            <div class="nombre-tiempo">
+                Horas
+            </div>
+
+        </div>
+
+
+        <div class="caja">
+
+            <div class="numero" id="minutos">
+                0
+            </div>
+
+            <div class="nombre-tiempo">
+                Minutos
+            </div>
+
+        </div>
+
+
+        <div class="caja">
+
+            <div class="numero" id="segundos">
+                0
+            </div>
+
+            <div class="nombre-tiempo">
+                Segundos
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     MISA
+================================================== -->
+
+<section class="seccion revelar">
+
+    <div class="icono">
+        ⛪
+    </div>
+
+    <div class="etiqueta">
+        Comenzamos con la bendición
+    </div>
+
+    <h2 class="titulo">
+        Ceremonia Religiosa
+    </h2>
+
+
+    <div class="tarjeta">
+
+        <h3>
+            Parroquia de Nuestra Señora
+            del Rosario Fátima
+        </h3>
+
+        <p class="direccion">
+
+            Av. Cultura Tolteca Manzana 038 LT. 1
+
+            <br>
+
+            U.H. Rosario 1 Sector (Croc) III-A
+
+            <br>
+
+            Tlalnepantla de Baz
+
+            <br><br>
+
+            <strong>
+                1:00 p.m.
+            </strong>
+
+        </p>
+
+
+        <a
+            class="boton"
+            href="https://share.google/OqShUqu5P9QNF8WFn"
+            target="_blank"
+        >
+            📍 Ver ubicación
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     RECEPCIÓN
+================================================== -->
+
+<section class="seccion revelar">
+
+    <div class="icono">
+        🌸
+    </div>
+
+    <div class="etiqueta">
+        Después de la misa...
+    </div>
+
+    <h2 class="titulo">
+        ¡A celebrar!
+    </h2>
+
+
+    <div class="tarjeta">
+
+        <h3>
+            Salón Parque Olimpia
+        </h3>
+
+        <p class="direccion">
+
+            Av. Las Culturas Croc 6
+
+            <br><br>
+
+            <strong>
+                3:00 p.m.
+            </strong>
+
+        </p>
+
+
+        <a
+            class="boton boton-dorado"
+            href="https://share.google/HHDemyOsW2zLFvm9N"
+            target="_blank"
+        >
+            📍 Ver ubicación
+        </a>
+
+    </div>
+
+
+    <div class="adorno">
+        ✿ ✦ ✿
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     CONFIRMACIÓN
+================================================== -->
+
+<section class="seccion revelar final">
+
+    <div class="adorno">
+        ♡ ✦ ♡
+    </div>
+
+    <div class="etiqueta">
+        Nos encantará compartirlo contigo
+    </div>
+
+    <h2 class="titulo">
+        ¡Te esperamos!
+    </h2>
+
+    <p class="texto">
+
+        Gracias por acompañarnos
+        en este momento tan importante
+        para nuestra familia.
+
+        <br><br>
+
+        Será muy bonito celebrar
+        juntos este día.
+
+    </p>
+
+
+    <div class="final-corazones">
+        ♡ ♡ ♡
+    </div>
+
+
+    <p
+        class="texto"
+        style="margin-top:25px;"
+    >
+        Con amor:
+    </p>
+
+
+    <div class="firma">
+        Diego, Ludwika y Valentina
+    </div>
+
+
+    <a
+        class="boton"
+        href="https://wa.me/52562842312?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20al%20bautizo%20de%20Lya%20Valentina."
+        target="_blank"
+    >
+        💌 Confirmar asistencia
+    </a>
+
+
+    <div
+        style="
+            margin-top:35px;
+            color:#a67585;
+            font-size:11px;
+            letter-spacing:3px;
+        "
+    >
+        26 · 09 · 2026
+    </div>
+
+
+    <!-- corazones flotantes -->
+
+    <div class="corazon-flotante cf1">
+        ♡
+    </div>
+
+    <div class="corazon-flotante cf2">
+        ♡
+    </div>
+
+    <div class="corazon-flotante cf3">
+        ♡
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     PAPEL PICADO FINAL
+================================================== -->
+
+<div class="papel-picado">
+
+    <div class="bandera"></div>
+    <div class="bandera"></div>
+    <div class="bandera"></div>
+    <div class="bandera"></div>
+    <div class="bandera"></div>
+    <div class="bandera"></div>
+    <div class="bandera"></div>
+
+</div>
+
+
+</div>
+
+
+<!-- =================================================
+     CUENTA REGRESIVA
+================================================== -->
+
+<script>
+
+const fechaEvento =
+new Date("2026-09-26T13:00:00-06:00").getTime();
+
+
+function actualizarCuenta() {
+
+    const ahora =
+    new Date().getTime();
+
+    let diferencia =
+    fechaEvento - ahora;
+
+
+    if (diferencia < 0) {
+        diferencia = 0;
+    }
+
+
+    const dias =
+    Math.floor(
+        diferencia /
+        (1000 * 60 * 60 * 24)
+    );
+
+
+    const horas =
+    Math.floor(
+        (diferencia %
+        (1000 * 60 * 60 * 24))
+        /
+        (1000 * 60 * 60)
+    );
+
+
+    const minutos =
+    Math.floor(
+        (diferencia %
+        (1000 * 60 * 60))
+        /
+        (1000 * 60)
+    );
+
+
+    const segundos =
+    Math.floor(
+        (diferencia %
+        (1000 * 60))
+        /
+        1000
+    );
+
+
+    document.getElementById("dias").textContent =
+    dias;
+
+    document.getElementById("horas").textContent =
+    horas;
+
+    document.getElementById("minutos").textContent =
+    minutos;
+
+    document.getElementById("segundos").textContent =
+    segundos;
+
+}
+
+
+actualizarCuenta();
+
+setInterval(
+    actualizarCuenta,
+    1000
+);
+
+</script>
+
+
+</body>
+</html>
